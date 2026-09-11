@@ -1,0 +1,99 @@
+﻿@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    background-color: #080c14;
+    color: #e2e8f0;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+}
+
+/* Custom smooth dark scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #080c14;
+}
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #334155;
+}
+
+/* Glass panel utility */
+.glass-panel {
+  background: rgba(13, 21, 36, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(30, 48, 80, 0.8);
+}
+
+.glass-panel-hover {
+  transition: all 0.2s ease-in-out;
+}
+.glass-panel-hover:hover {
+  border-color: rgba(6, 182, 212, 0.4);
+  box-shadow: 0 4px 20px -4px rgba(6, 182, 212, 0.15);
+}
+
+/* Leaflet Map overrides for dark theme */
+.leaflet-container {
+  background-color: #080c14 !important;
+  font-family: inherit;
+}
+
+.leaflet-bar a {
+  background-color: #0d1524 !important;
+  color: #94a3b8 !important;
+  border-color: #1e3050 !important;
+}
+.leaflet-bar a:hover {
+  background-color: #162540 !important;
+  color: #06b6d4 !important;
+}
+
+.leaflet-popup-content-wrapper {
+  background: #0d1524 !important;
+  color: #e2e8f0 !important;
+  border: 1px solid #1e3050;
+  border-radius: 8px !important;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.6) !important;
+  padding: 0 !important;
+}
+.leaflet-popup-tip {
+  background: #0d1524 !important;
+}
+.leaflet-popup-content {
+  margin: 0 !important;
+  line-height: 1.4 !important;
+}
+
+/* Marker pulse animations */
+@keyframes pulse-ring {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  50% {
+    transform: scale(1.4);
+    opacity: 0.3;
+  }
+  100% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+}
+
+.marker-pulse-red {
+  animation: pulse-ring 2s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
+
+.marker-pulse-orange {
+  animation: pulse-ring 2.4s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+}
