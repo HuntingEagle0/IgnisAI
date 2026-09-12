@@ -1,4 +1,4 @@
-﻿import React from 'react';
+import React from 'react';
 import {
   Flame,
   Radio,
@@ -73,7 +73,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 IGNIS <span className="text-cyan-400">AI</span>
               </span>
               <span className="hidden sm:inline-flex items-center rounded-md bg-cyan-950/60 px-2 py-0.5 text-[10px] font-semibold text-cyan-400 border border-cyan-800/60">
-                SIH-2024
+                SIH-2026
               </span>
             </div>
             <p className="hidden md:block text-[11px] font-medium text-slate-400">

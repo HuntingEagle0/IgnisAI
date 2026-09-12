@@ -1,7 +1,7 @@
-﻿# IGNIS AI
+# IGNIS AI
 ### AI-Based Detection and Classification of Industrial Fires & Persistent Thermal Sources
 
-[![Smart India Hackathon](https://img.shields.io/badge/SIH-2024-cyan.svg)](https://sih.gov.in)
+[![Smart India Hackathon](https://img.shields.io/badge/SIH-2026-cyan.svg)](https://sih.gov.in)
 [![Python](https://img.shields.io/badge/Python-3.10%2B-blue.svg)](https://www.python.org/)
 [![PyTorch](https://img.shields.io/badge/PyTorch-2.2%2B-orange.svg)](https://pytorch.org/)
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.110%2B-emerald.svg)](https://fastapi.tiangolo.com)
