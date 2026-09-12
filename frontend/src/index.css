@@ -1,4 +1,4 @@
-﻿@tailwind base;
+@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -46,6 +46,16 @@
 .leaflet-container {
   background-color: #080c14 !important;
   font-family: inherit;
+  /* Isolate stacking context so Leaflet's internal z-indexes stay inside the map */
+  isolation: isolate;
+}
+
+/* Keep Leaflet's native zoom controls below app-level overlays */
+.leaflet-control-zoom {
+  z-index: 10 !important;
+}
+.leaflet-control-attribution {
+  z-index: 10 !important;
 }
 
 .leaflet-bar a {

@@ -1,4 +1,4 @@
-﻿import React, { useState } from 'react';
+import React, { useState } from 'react';
 import { ThermalMap } from '../components/map/ThermalMap';
 import { MapFilterBar } from '../components/map/MapFilterBar';
 import { Detection, FilterState } from '../types/detection';
@@ -69,7 +69,7 @@ export const ThermalMapPage: React.FC<ThermalMapPageProps> = ({
       {/* Floating Filter Toggle for Mobile */}
       <button
         onClick={() => setShowFilters(!showFilters)}
-        className="absolute top-3 left-44 z-[400] flex items-center gap-1.5 rounded-lg bg-[#0d1524]/90 px-3 py-1.5 text-xs font-mono text-cyan-300 border border-slate-800 shadow-lg backdrop-blur-md hover:bg-slate-800 transition-colors"
+        className="absolute top-3 left-44 z-[10] flex items-center gap-1.5 rounded-lg bg-[#0d1524]/90 px-3 py-1.5 text-xs font-mono text-cyan-300 border border-slate-800 shadow-lg backdrop-blur-md hover:bg-slate-800 transition-colors"
       >
         <SlidersHorizontal className="h-3.5 w-3.5" />
         <span>{showFilters ? 'Hide Filters' : 'Filters'}</span>
@@ -77,7 +77,7 @@ export const ThermalMapPage: React.FC<ThermalMapPageProps> = ({
 
       {/* Left Floating Controls Drawer */}
       {showFilters && (
-        <div className="absolute top-14 left-3 z-[400] w-80 max-h-[calc(100%-8rem)] overflow-y-auto no-scrollbar transition-all">
+        <div className="absolute top-14 left-3 z-[10] w-80 max-h-[calc(100%-8rem)] overflow-y-auto no-scrollbar transition-all">
           <MapFilterBar
             filter={filter}
             onChange={setFilter}
@@ -87,7 +87,7 @@ export const ThermalMapPage: React.FC<ThermalMapPageProps> = ({
       )}
 
       {/* Bottom Mission Intel Bar (Required Section 8) */}
-      <div className="absolute bottom-3 right-3 left-3 sm:left-auto z-[400] flex flex-wrap items-center justify-between gap-4 rounded-xl border border-ignis-border bg-[#0a101d]/95 px-5 py-3 shadow-2xl backdrop-blur-xl font-mono text-xs">
+      <div className="absolute bottom-3 right-3 left-3 sm:left-auto z-[10] flex flex-wrap items-center justify-between gap-4 rounded-xl border border-ignis-border bg-[#0a101d]/95 px-5 py-3 shadow-2xl backdrop-blur-xl font-mono text-xs">
         <div className="flex items-center gap-2">
           <Radio className="h-3.5 w-3.5 text-cyan-400 animate-pulse" />
           <span className="font-bold text-slate-200">

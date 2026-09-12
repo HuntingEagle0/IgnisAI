@@ -1,4 +1,4 @@
-﻿import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import L from 'leaflet';
 import { Detection } from '../../types/detection';
 import { formatConfidence, formatCoordinates, formatFRP } from '../../utils/formatters';
@@ -30,8 +30,8 @@ export const ThermalMap: React.FC<ThermalMapProps> = ({
 
   const tileUrls: Record<TileProvider, { url: string; attribution: string }> = {
     dark: {
-      url: 'https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',
-      attribution: '&copy; <a href="https://carto.com/">CARTO</a> &copy; OpenStreetMap contributors',
+      url: 'https://tiles.stadiamaps.com/tiles/alidade_smooth_dark/{z}/{x}/{y}{r}.png',
+      attribution: '&copy; <a href="https://stadiamaps.com/">Stadia Maps</a> &copy; <a href="https://openmaptiles.org/">OpenMapTiles</a> &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
     },
     satellite: {
       url: 'https://server.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}',
@@ -159,7 +159,7 @@ export const ThermalMap: React.FC<ThermalMapProps> = ({
       <div ref={mapContainerRef} className="h-full w-full" />
 
       {/* Top Left Tile Selector */}
-      <div className="absolute top-3 left-3 z-[400] flex items-center gap-1 rounded-lg bg-[#0d1524]/90 p-1 border border-slate-800 backdrop-blur-md shadow-lg">
+      <div className="absolute top-3 left-3 z-[10] flex items-center gap-1 rounded-lg bg-[#0d1524]/90 p-1 border border-slate-800 backdrop-blur-md shadow-lg">
         <Layers className="h-3.5 w-3.5 text-cyan-400 ml-1.5 mr-0.5" />
         <button
           onClick={() => setActiveTile('dark')}
@@ -197,13 +197,13 @@ export const ThermalMap: React.FC<ThermalMapProps> = ({
       <button
         onClick={handleFitBounds}
         title="Fit Map to All Detections"
-        className="absolute top-3 right-12 z-[400] flex items-center justify-center p-2 rounded-lg bg-[#0d1524]/90 border border-slate-800 text-slate-300 hover:text-cyan-400 backdrop-blur-md shadow-lg transition-colors"
+        className="absolute top-3 right-12 z-[10] flex items-center justify-center p-2 rounded-lg bg-[#0d1524]/90 border border-slate-800 text-slate-300 hover:text-cyan-400 backdrop-blur-md shadow-lg transition-colors"
       >
         <Maximize2 className="h-4 w-4" />
       </button>
 
       {/* Bottom Floating Legend */}
-      <div className="absolute bottom-3 left-3 z-[400] rounded-lg bg-[#0d1524]/95 p-3 border border-slate-800 backdrop-blur-md shadow-xl text-xs space-y-2">
+      <div className="absolute bottom-3 left-3 z-[10] rounded-lg bg-[#0d1524]/95 p-3 border border-slate-800 backdrop-blur-md shadow-xl text-xs space-y-2">
         <div className="flex items-center gap-1.5 font-mono text-[10px] font-bold uppercase tracking-wider text-slate-400">
           <span>Thermal Semantics</span>
         </div>
